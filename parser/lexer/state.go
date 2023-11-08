@@ -3,7 +3,7 @@ package lexer
 import (
 	"strings"
 
-	"github.com/antonmedv/expr/parser/utils"
+	"github.com/liulinpro/expr/parser/utils"
 )
 
 type stateFn func(*lexer) stateFn

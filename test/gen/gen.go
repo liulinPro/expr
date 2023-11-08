@@ -6,9 +6,9 @@ import (
 	"reflect"
 	"runtime/debug"
 
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/ast"
-	"github.com/antonmedv/expr/builtin"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/ast"
+	"github.com/liulinpro/expr/builtin"
 )
 
 var env = map[string]any{

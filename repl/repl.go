@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/antonmedv/expr/test/fuzz"
+	"github.com/liulinpro/expr/test/fuzz"
 	"os"
 	"runtime"
 	"strings"
 
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/builtin"
-	"github.com/antonmedv/expr/debug"
-	"github.com/antonmedv/expr/vm"
+	"github.com/liulinpro/expr/debug"
+	"github.com/liulinpro/expr/vm"
 	"github.com/bettercap/readline"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/builtin"
 )
 
 var keywords = []string{

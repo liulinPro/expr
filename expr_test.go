@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/ast"
-	"github.com/antonmedv/expr/file"
-	"github.com/antonmedv/expr/test/mock"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/ast"
+	"github.com/liulinpro/expr/file"
+	"github.com/liulinpro/expr/test/mock"
 )
 
 func ExampleEval() {

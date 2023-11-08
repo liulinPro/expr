@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/test/crowdsec"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/test/crowdsec"
 	"github.com/stretchr/testify/require"
 )
 

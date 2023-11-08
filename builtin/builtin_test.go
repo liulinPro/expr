@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/builtin"
-	"github.com/antonmedv/expr/checker"
-	"github.com/antonmedv/expr/conf"
-	"github.com/antonmedv/expr/parser"
-	"github.com/antonmedv/expr/test/mock"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/builtin"
+	"github.com/liulinpro/expr/checker"
+	"github.com/liulinpro/expr/conf"
+	"github.com/liulinpro/expr/parser"
+	"github.com/liulinpro/expr/test/mock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -380,7 +380,7 @@ func TestBuiltin_type(t *testing.T) {
 		{func() {}, "func"},
 		{time.Now(), "time.Time"},
 		{time.Second, "time.Duration"},
-		{Foo{}, "github.com/antonmedv/expr/builtin_test.Foo"},
+		{Foo{}, "github.com/liulinpro/expr/builtin_test.Foo"},
 		{struct{}{}, "struct"},
 		{a, "int"},
 	}

@@ -10,8 +10,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/vm"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/vm"
 )
 
 func main() {

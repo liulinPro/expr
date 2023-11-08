@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/test/mock"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/test/mock"
 	"github.com/stretchr/testify/require"
 )
 

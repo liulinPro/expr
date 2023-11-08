@@ -3,8 +3,8 @@ package ast_test
 import (
 	"testing"
 
-	"github.com/antonmedv/expr/ast"
-	"github.com/antonmedv/expr/parser"
+	"github.com/liulinpro/expr/ast"
+	"github.com/liulinpro/expr/parser"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

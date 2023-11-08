@@ -6,13 +6,13 @@ import (
 	"strconv"
 	"strings"
 
-	. "github.com/antonmedv/expr/ast"
-	"github.com/antonmedv/expr/builtin"
-	"github.com/antonmedv/expr/conf"
-	"github.com/antonmedv/expr/file"
-	. "github.com/antonmedv/expr/parser/lexer"
-	"github.com/antonmedv/expr/parser/operator"
-	"github.com/antonmedv/expr/parser/utils"
+	. "github.com/liulinpro/expr/ast"
+	"github.com/liulinpro/expr/builtin"
+	"github.com/liulinpro/expr/conf"
+	"github.com/liulinpro/expr/file"
+	. "github.com/liulinpro/expr/parser/lexer"
+	"github.com/liulinpro/expr/parser/operator"
+	"github.com/liulinpro/expr/parser/utils"
 )
 
 var predicates = map[string]struct {

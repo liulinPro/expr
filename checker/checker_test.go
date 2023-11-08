@@ -10,12 +10,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/ast"
-	"github.com/antonmedv/expr/checker"
-	"github.com/antonmedv/expr/conf"
-	"github.com/antonmedv/expr/parser"
-	"github.com/antonmedv/expr/test/mock"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/ast"
+	"github.com/liulinpro/expr/checker"
+	"github.com/liulinpro/expr/conf"
+	"github.com/liulinpro/expr/parser"
+	"github.com/liulinpro/expr/test/mock"
 )
 
 func TestCheck(t *testing.T) {

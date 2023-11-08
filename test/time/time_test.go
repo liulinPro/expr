@@ -5,12 +5,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/checker"
-	"github.com/antonmedv/expr/compiler"
-	"github.com/antonmedv/expr/conf"
-	"github.com/antonmedv/expr/parser"
-	"github.com/antonmedv/expr/vm"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/checker"
+	"github.com/liulinpro/expr/compiler"
+	"github.com/liulinpro/expr/conf"
+	"github.com/liulinpro/expr/parser"
+	"github.com/liulinpro/expr/vm"
 	"github.com/stretchr/testify/require"
 )
 

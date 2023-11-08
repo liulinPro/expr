@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/antonmedv/expr/ast"
-	"github.com/antonmedv/expr/vm/runtime"
+	"github.com/liulinpro/expr/ast"
+	"github.com/liulinpro/expr/vm/runtime"
 )
 
 var (

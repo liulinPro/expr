@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/antonmedv/expr"
-	"github.com/antonmedv/expr/test/coredns"
+	"github.com/liulinpro/expr"
+	"github.com/liulinpro/expr/test/coredns"
 	"github.com/stretchr/testify/assert"
 )
 
