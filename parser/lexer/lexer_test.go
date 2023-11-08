@@ -51,7 +51,7 @@ func TestLex(t *testing.T) {
 			"a and orb().val #.",
 			[]Token{
 				{Kind: Identifier, Value: "a"},
-				{Kind: Operator, Value: "and"},
+				{Kind: Operator, Value: "AND"},
 				{Kind: Identifier, Value: "orb"},
 				{Kind: Bracket, Value: "("},
 				{Kind: Bracket, Value: ")"},

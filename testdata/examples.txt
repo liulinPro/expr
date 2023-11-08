@@ -2,7 +2,7 @@
 !!(f32 > f64)
 !!(half != greet)
 !!(nil == add)
-!!(ok or true)
+!!(ok OR true)
 !!false
 !!not false
 !!ok
@@ -270,9 +270,9 @@
 !(false == false)
 !(false == nil)
 !(false == ok)
-!(false and ok)
-!(false or ok)
-!(false or true)
+!(false AND ok)
+!(false OR ok)
+!(false OR true)
 !(false || false)
 !(false || ok)
 !(false || true)
@@ -496,9 +496,9 @@
 !(ok == false)
 !(ok == nil)
 !(ok == ok)
-!(ok and ok)
-!(ok and true)
-!(ok or ok)
+!(ok AND ok)
+!(ok AND true)
+!(ok OR ok)
 !(ok || false)
 !(ok || ok)
 !(score != add)
@@ -523,10 +523,10 @@
 !(true == nil)
 !(true == ok)
 !(true == true)
-!(true and false)
-!(true and ok)
-!(true and true)
-!(true or true)
+!(true AND false)
+!(true AND ok)
+!(true AND true)
+!(true OR true)
 !(true || ok)
 !(true || true)
 !all(array, false)
@@ -579,9 +579,9 @@
 !false ? nil : foo
 !false ? ok : ok
 !false ? true : array
-!false and (true or false)
-!false and ok
-!false or 0.5 != 1
+!false AND (true OR false)
+!false AND ok
+!false OR 0.5 != 1
 !false || not false
 !hasSuffix("bar", "bar")
 !none(array, false)
@@ -637,9 +637,9 @@
 !ok ? score : array
 !ok ? score : i
 !ok ? true : greet
-!ok and i != f32
-!ok and ok
-!ok or none(array, ok)
+!ok AND i != f32
+!ok AND ok
+!ok OR none(array, ok)
 !one(array, ok)
 !one(array, true)
 !one(list, false)
@@ -689,14 +689,14 @@
 !true ? ok : list
 !true ? score : array
 !true ? score : nil
-!true and ok
-!true or !false
-!true or nil != ok
+!true AND ok
+!true OR !false
+!true OR nil != ok
 !true || ok
 "bar" != foo.Bar
 "bar" != foo?.Bar
 "bar" != foo?.String()
-"bar" != nil and true ? i64 : 0.5
+"bar" != nil AND true ? i64 : 0.5
 "bar" + "foo" not endsWith greet("bar")
 "bar" + foo.Bar
 "bar" + foo?.Bar
@@ -748,7 +748,7 @@
 "foo" + foo.String()
 "foo" + foo?.Bar
 "foo" + foo?.String()
-"foo" < "bar" and i32 != 0.5
+"foo" < "bar" AND i32 != 0.5
 "foo" < "foo" ? list : f32
 "foo" < foo.Bar
 "foo" < foo?.Bar
@@ -789,10 +789,10 @@
 "foo" startsWith foo.Bar
 "foo" startsWith foo?.Bar
 "foo" startsWith foo?.String()
-("bar" not endsWith "bar") and i64 < i32
+("bar" not endsWith "bar") AND i64 < i32
 ("bar" not endsWith "foo") == ok
 ("bar" not in foo) == ok
-("foo" not matches "bar") and false ? f64 : array
+("foo" not matches "bar") AND false ? f64 : array
 (0.5 * 0.5) ** f32
 (0.5 * 0.5) ** i
 (0.5 * 0.5) ** i64
@@ -857,7 +857,7 @@
 (1 / 1) ^ i32
 (1 / f64) ** f64
 (1 / i) ** i64
-(1 not in array) and none(list, true)
+(1 not in array) AND none(list, true)
 (f32 * 1) ** f32
 (f32 * 1) ** i64
 (f32 * i) ^ i64
@@ -900,7 +900,7 @@
 (f64 - i64) / i64
 (f64 / 0.5) ** f64
 (f64 / i) ^ i64
-(false || ok) and ok
+(false || ok) AND ok
 (i % 1) ** -f32
 (i % 1) ** f64
 (i % i) ** f32
@@ -971,8 +971,8 @@
 (i64 / i32) ^ -1
 (i64 not in array) && ok
 (ok && ok) == ok
-(ok or false) and ok
-(ok or ok) == not false
+(ok OR false) AND ok
+(ok OR ok) == not false
 (ok || true) && i32 >= f64
 -(0.5 * 0.5)
 -(0.5 * 1)
@@ -1746,12 +1746,12 @@
 0.5 != 0.5 ? f64 : half
 0.5 != 0.5 ? i64 : f64
 0.5 != 0.5 ? list : array
-0.5 != 0.5 or ok
+0.5 != 0.5 OR ok
 0.5 != f32 || 0.5 > 0.5
 0.5 != i && i64 > 1
 0.5 != i64 != ok
 0.5 != i64 ? -f32 : add
-0.5 != nil or ok
+0.5 != nil OR ok
 0.5 * 0.5 != i / 1
 0.5 * 0.5 * i
 0.5 * 0.5 * i32
@@ -1889,44 +1889,44 @@
 0.5 / i64 * i32
 0.5 < 0.5 == nil ? true : foo
 0.5 < 0.5 || ok
-0.5 < 1 and ok
-0.5 < 1 or fromJSON("foo")?.Bar
+0.5 < 1 AND ok
+0.5 < 1 OR fromJSON("foo")?.Bar
 0.5 < f32 ? map(list, i32) : i
 0.5 < f64 != false ? f32 : score
 0.5 < f64 ? list : greet
 0.5 < f64 || ok
 0.5 < i ? f64 : foo
-0.5 < i32 or i32 == 1
-0.5 < i64 or ok
-0.5 <= 0.5 and ok
+0.5 < i32 OR i32 == 1
+0.5 < i64 OR ok
+0.5 <= 0.5 AND ok
 0.5 <= 1 ? half : greet
 0.5 <= array[i32]
-0.5 <= f32 or ok
-0.5 <= f64 and !true
-0.5 <= f64 or ok
+0.5 <= f32 OR ok
+0.5 <= f64 AND !true
+0.5 <= f64 OR ok
 0.5 <= i == ok
-0.5 <= i and nil == list
-0.5 <= i32 and i < i64
+0.5 <= i AND nil == list
+0.5 <= i32 AND i < i64
 0.5 <= i64 && f64 >= f64
 0.5 == 0.5 ? score : i
 0.5 == 1 == ok
 0.5 == 1 == ok ? "foo" : div
-0.5 == 1 or ok
+0.5 == 1 OR ok
 0.5 == 1 || nil != score
 0.5 == f32 ? score : i32
 0.5 == f64 && ok
 0.5 == nil || div != score
 0.5 == nil || ok
 0.5 > 1 == ok
-0.5 > 1 or ok
-0.5 > f32 or !true
+0.5 > 1 OR ok
+0.5 > f32 OR !true
 0.5 > f64 != ok
 0.5 >= 0.5 == ok
 0.5 >= 0.5 || ok
 0.5 >= 1 != ok
-0.5 >= 1 and ok
+0.5 >= 1 AND ok
 0.5 >= i32 && i > f32
-0.5 >= i64 and ok
+0.5 >= i64 AND ok
 0.5 ^ 0.5 != i32
 0.5 ^ 0.5 + i32
 0.5 ^ 0.5 / i
@@ -1970,7 +1970,7 @@
 1 != f32 && i32 <= 0.5
 1 != f32 == ok
 1 != f32 ? i64 : foo
-1 != f32 and i in array
+1 != f32 AND i in array
 1 != f64 != ok
 1 != i32 ? score : greet
 1 != i64 && ok
@@ -2133,28 +2133,28 @@
 1 / i64 >= i32
 1 < array[i64]
 1 < f64 != ok
-1 < i32 and 1 == nil
+1 < i32 AND 1 == nil
 1 < i64 ? "foo" not endsWith "foo" : i
-1 <= 0.5 and i32 == 1
+1 <= 0.5 AND i32 == 1
 1 <= 0.5 || ok
 1 <= 1 && greet != greet
-1 <= 1 and ok
+1 <= 1 AND ok
 1 <= f32 != ok
 1 <= f32 == !ok
 1 <= f64 ? add : f64
-1 <= i64 or nil == f32
+1 <= i64 OR nil == f32
 1 == array[i]
 1 > 0.5 != ok
-1 > 1 and ok
+1 > 1 AND ok
 1 > 1 || ok
-1 > f32 and ok
+1 > f32 AND ok
 1 > f64 == ok
-1 > f64 and ok
+1 > f64 AND ok
 1 > i32 == ok
 1 > i64 || i32 < i
 1 >= 1 || ok
 1 >= i || ok
-1 >= i64 or nil in list
+1 >= i64 OR nil in list
 1 ^ 0.5 - f32
 1 ^ 0.5 <= f32
 1 ^ 0.5 <= i64
@@ -2673,7 +2673,7 @@ add
 add != add
 add != div
 add != div ? foo : i64
-add != div and ok
+add != div AND ok
 add != foo.Qux
 add != foo.String
 add != foo?.Qux
@@ -2691,7 +2691,7 @@ add == add
 add == add == ok
 add == div
 add == div ? i32 : f64
-add == div or ok
+add == div OR ok
 add == foo.Qux
 add == foo.String
 add == foo?.Qux
@@ -2708,8 +2708,8 @@ add == nil ? score : i64
 add == nil || ok
 add == score
 add == score != true
-add == score and i32 >= 1
-add == score or 0.5 < 1
+add == score AND i32 >= 1
+add == score OR 0.5 < 1
 add in [div]
 add not in sort(array)
 add(1, 1) ** i
@@ -2726,7 +2726,7 @@ all(1 .. i32, ok)
 all(array, !(# <= #))
 all(array, !false)
 all(array, !ok)
-all(array, !true or 0.5 < #)
+all(array, !true OR 0.5 < #)
 all(array, "bar" in foo)
 all(array, "bar" matches "bar")
 all(array, # != #)
@@ -2793,7 +2793,7 @@ all(array, f64 < #)
 all(array, f64 <= #)
 all(array, f64 == #)
 all(array, f64 > #)
-all(array, false or ok)
+all(array, false OR ok)
 all(array, i != f32)
 all(array, i == #)
 all(array, i > #)
@@ -2824,7 +2824,7 @@ all(array, one(array, ok))
 all(array, score == add)
 all(array, score(#) > f32)
 all(array, true || false)
-all(array, true) or ok
+all(array, true) OR ok
 all(false ? greet : "foo", # == i32)
 all(filter(array, ok), # < #)
 all(filter(array, true), ok)
@@ -2861,7 +2861,7 @@ all(list, f64 <= 1)
 all(list, f64 <= i)
 all(list, f64 <= i32)
 all(list, f64 >= 1)
-all(list, false) or 0.5 <= 1
+all(list, false) OR 0.5 <= 1
 all(list, foo != #)
 all(list, greet != half)
 all(list, greet == score)
@@ -2881,9 +2881,9 @@ all(list, none(array, ok))
 all(list, not false)
 all(list, not ok)
 all(list, not true)
-all(list, ok and false)
+all(list, ok AND false)
 all(list, ok)
-all(list, ok) or ok
+all(list, ok) OR ok
 all(list, true != false)
 all(list, true != true)
 all(list, true ? true : 1)
@@ -2892,7 +2892,7 @@ all(map(array, #), # != #)
 all(map(array, #), # != 0.5)
 all(map(array, #), # >= #)
 all(map(array, #), i64 == #)
-all(map(array, #), true or false)
+all(map(array, #), true OR false)
 all(map(array, 1), ok)
 all(map(array, i), f64 > #)
 all(map(array, ok), #)
@@ -2979,7 +2979,7 @@ any(array, f64 > #)
 any(array, f64 > 0.5)
 any(array, f64 >= i64)
 any(array, false != nil)
-any(array, false) and f32 != f32
+any(array, false) AND f32 != f32
 any(array, greet != half)
 any(array, half != div)
 any(array, half != nil)
@@ -3014,7 +3014,7 @@ any(array, not true)
 any(array, ok)
 any(array, one(list, false))
 any(array, true ? ok : f32)
-any(array, true) and ok
+any(array, true) AND ok
 any(filter(array, ok), ok)
 any(filter(list, false), ok)
 any(filter(list, true), # == #)
@@ -3070,11 +3070,11 @@ any(list, nil == i64)
 any(list, nil == nil)
 any(list, not false)
 any(list, not ok)
-any(list, ok and foo != #)
+any(list, ok AND foo != #)
 any(list, ok)
 any(list, ok) && i <= 1
 any(list, ok) ? array : foo
-any(list, true or ok)
+any(list, true OR ok)
 any(list, true) ? f64 : foo.Bar
 any(map(array, #), # == #)
 any(map(array, #), ok)
@@ -3099,7 +3099,7 @@ array != map(array, i)
 array != nil != ok
 array != nil ? 0.5 : i32
 array != nil ? true : nil
-array != nil or nil == f32
+array != nil OR nil == f32
 array != nil || ok
 array != sort(array)
 array != {"bar": f32, "foo": 1}.ok
@@ -3158,7 +3158,7 @@ array[min(i32)]
 array[min(i64)]
 array[score(1)]
 array[score(i)]
-count([list], false or ok)
+count([list], false OR ok)
 count(array, !ok)
 count(array, "bar" != "bar")
 count(array, "bar" not endsWith "bar")
@@ -3296,7 +3296,7 @@ count(list, all(list, true))
 count(list, f32 <= i32)
 count(list, f64 != i)
 count(list, false ? # : ok)
-count(list, false or ok)
+count(list, false OR ok)
 count(list, false || false)
 count(list, false) .. i32
 count(list, false) > i64
@@ -3321,7 +3321,7 @@ count(list, ok) - i32
 count(list, ok) < f64
 count(list, ok) > -0.5
 count(list, ok) >= i
-count(list, true and ok)
+count(list, true AND ok)
 count(list, true) ** i64
 count(list, true) == f64
 count(list, true) ^ i64
@@ -3350,14 +3350,14 @@ div != add
 div != add != ok
 div != div
 div != div ? score : 0.5
-div != div or half != greet
+div != div OR half != greet
 div != foo.Qux
 div != foo.String
 div != foo?.Qux
 div != greet
 div != half
 div != half ? f32 : ok
-div != half and !ok
+div != half AND !ok
 div != nil != ok
 div != nil ? array : add
 div != nil ? i : i64
@@ -3757,7 +3757,7 @@ f32 < i - i32
 f32 < i ? greet : "foo"
 f32 < i32
 f32 < i32 ** 0.5
-f32 < i32 or ok
+f32 < i32 OR ok
 f32 < i32 || ok
 f32 < i64
 f32 < i64 != nil
@@ -3793,7 +3793,7 @@ f32 <= f32 ? 0.5 : foo
 f32 <= f64
 f32 <= f64 ? ok : f64
 f32 <= f64 ^ f32
-f32 <= f64 and ok
+f32 <= f64 AND ok
 f32 <= findIndex(list, ok)
 f32 <= first(array)
 f32 <= half(0.5)
@@ -3811,11 +3811,11 @@ f32 <= i32 + i32
 f32 <= i32 - 1
 f32 <= i32 / 1
 f32 <= i32 ? 0.5 : i32
-f32 <= i32 and ok
+f32 <= i32 AND ok
 f32 <= i64
 f32 <= i64 * i
 f32 <= i64 ? true : array
-f32 <= i64 or ok
+f32 <= i64 OR ok
 f32 <= int(0.5)
 f32 <= int(i)
 f32 <= len("foo")
@@ -3833,7 +3833,7 @@ f32 == -i64
 f32 == 0.5 && i32 == i32
 f32 == 0.5 * i32
 f32 == 0.5 ** 1
-f32 == 0.5 and ok
+f32 == 0.5 AND ok
 f32 == 1 && ok ? add : f32
 f32 == 1 ^ i
 f32 == abs(1)
@@ -3902,7 +3902,7 @@ f32 > f64 - i32
 f32 > f64 / i64
 f32 > f64 ? array : false
 f32 > f64 ? true : array
-f32 > f64 or ok
+f32 > f64 OR ok
 f32 > i
 f32 > i * 0.5
 f32 > i + f32
@@ -4033,7 +4033,7 @@ f64 != 0.5 + f64
 f64 != 0.5 == nil
 f64 != 0.5 == true
 f64 != 0.5 ? false : array
-f64 != 0.5 and ok
+f64 != 0.5 AND ok
 f64 != 1 ? list : false
 f64 != 1 ^ i64
 f64 != abs(f32)
@@ -4375,12 +4375,12 @@ f64 < 0.5 ? 0.5 : foo
 f64 < 0.5 ? 1 : array
 f64 < 0.5 ? greet : false
 f64 < 0.5 ^ 1
-f64 < 0.5 or ok
+f64 < 0.5 OR ok
 f64 < 1 == not ok
 f64 < 1 ? 1 : half
 f64 < 1 ? 1 : i
 f64 < 1 ? ok : i
-f64 < 1 and nil == i32
+f64 < 1 AND nil == i32
 f64 < abs(1)
 f64 < abs(i32)
 f64 < array[i32]
@@ -4403,7 +4403,7 @@ f64 < i32
 f64 < i32 % i32
 f64 < i32 % i64
 f64 < i32 == ok
-f64 < i32 and ok
+f64 < i32 AND ok
 f64 < i64
 f64 < i64 * i
 f64 < int(0.5)
@@ -4459,7 +4459,7 @@ f64 <= i64 % 1
 f64 <= i64 - f32
 f64 <= i64 - i64
 f64 <= i64 ^ 1
-f64 <= i64 and ok
+f64 <= i64 AND ok
 f64 <= int(1)
 f64 <= int(f64)
 f64 <= int(i)
@@ -4689,7 +4689,7 @@ f64 ^ len(list)
 f64 ^ max(0.5)
 f64 ^ score(1)
 false != true || 1 > f64
-false && ok or ok
+false && ok OR ok
 false ? "bar" : 0.5 == f32
 false ? "bar" : 1 != i
 false ? "bar" : foo.Qux
@@ -4722,7 +4722,7 @@ false ? score : 0.5 == i
 false ? score : 1 / i64
 false ? score : f64 - -f32
 false ? true : 0.5 == f32
-false or ok ? string(1) : f64 == f32
+false OR ok ? string(1) : f64 == f32
 filter(1 .. 1, # == 0.5)
 filter(1 .. i64, ok)
 filter([div], any(array, true))
@@ -4825,7 +4825,7 @@ filter(array, none(array, ok))
 filter(array, ok)
 filter(array, score(#) != #)
 filter(array, true && ok)
-filter(array, true or false)
+filter(array, true OR false)
 filter(array, true)[i:i32]
 filter(filter(array, true), i >= f32)
 filter(filter(list, false), "bar" in #)
@@ -4887,7 +4887,7 @@ filter(list, nil != score)
 filter(list, nil != true)
 filter(list, nil == #)
 filter(list, not ok)
-filter(list, ok or true)
+filter(list, ok OR true)
 filter(list, ok || true)
 filter(list, ok)
 filter(list, true == nil)
@@ -5056,7 +5056,7 @@ find(list, nil == score)
 find(list, nil not in array)
 find(list, nil not in list)
 find(list, not ok)
-find(list, ok or ok)
+find(list, ok OR ok)
 find(list, ok)
 find(list, ok).Bar
 find(list, ok).Qux
@@ -5194,7 +5194,7 @@ findIndex(array, ok) - i32
 findIndex(array, ok) / f64
 findIndex(array, ok) >= f64
 findIndex(array, score == greet)
-findIndex(array, true or false)
+findIndex(array, true OR false)
 findIndex(false ? div : list, ok)
 findIndex(list, !false)
 findIndex(list, !true)
@@ -5240,7 +5240,7 @@ findIndex(list, nil in list)
 findIndex(list, not false)
 findIndex(list, not ok)
 findIndex(list, ok != ok)
-findIndex(list, ok or ok)
+findIndex(list, ok OR ok)
 findIndex(list, ok)
 findIndex(list, ok) + f32
 findIndex(list, ok) / i
@@ -5606,8 +5606,8 @@ findLastIndex(list, f32 > f32)
 findLastIndex(list, f64 <= 1)
 findLastIndex(list, f64 == f64)
 findLastIndex(list, false == false)
-findLastIndex(list, false and false)
-findLastIndex(list, false and ok)
+findLastIndex(list, false AND false)
+findLastIndex(list, false AND ok)
 findLastIndex(list, false) != i
 findLastIndex(list, foo != #)
 findLastIndex(list, foo == foo)
@@ -5660,7 +5660,7 @@ findLastIndex(map(list, f32), # >= #)
 findLastIndex(map(list, f32), ok)
 findLastIndex(map(list, false), #)
 findLastIndex(map(list, half), ok)
-findLastIndex(map(list, ok), # or #)
+findLastIndex(map(list, ok), # OR #)
 findLastIndex(map(list, ok), #)
 findLastIndex(sort(array), ok)
 first(1 .. i)
@@ -6388,7 +6388,7 @@ greet != foo?.Qux
 greet != foo?.String
 greet != greet
 greet != greet != nil
-greet != greet or 0.5 == i
+greet != greet OR 0.5 == i
 greet != half
 greet != half ? 1 : ok
 greet != half ? array : 0.5
@@ -6528,7 +6528,7 @@ half == add
 half == add ? "bar" : half
 half == div
 half == div ? add : 0.5
-half == div and 1 >= 1
+half == div AND 1 >= 1
 half == foo.Qux
 half == foo.String
 half == foo?.Qux
@@ -6540,7 +6540,7 @@ half == greet || ok
 half == half
 half == half && i >= 0.5
 half == half ? score : "bar"
-half == half and ok
+half == half AND ok
 half == nil == true
 half == nil ? 1 : 0.5
 half == nil ? 1 : score
@@ -6884,7 +6884,7 @@ half(ok ? 0.5 : false)
 half(ok ? 0.5 : foo)
 half(true ? 0.5 : 0.5)
 hasPrefix("bar", "foo") != ok
-hasSuffix("foo", "foo") or 0.5 <= i
+hasSuffix("foo", "foo") OR 0.5 <= i
 i
 i != -0.5
 i != -1
@@ -6905,7 +6905,7 @@ i != 1 - 1
 i != 1 - i64
 i != 1 == ok
 i != 1 ? ok : i64
-i != 1 or i64 != 1
+i != 1 OR i64 != 1
 i != f32
 i != f32 + i
 i != f32 / 1
@@ -7318,12 +7318,12 @@ i <= f32 != nil
 i <= f32 * 0.5
 i <= f32 / f32
 i <= f32 ? ok : 1
-i <= f32 or ok
+i <= f32 OR ok
 i <= f64
 i <= f64 * 1
 i <= f64 == nil
 i <= f64 ? foo : div
-i <= f64 or add == greet
+i <= f64 OR add == greet
 i <= float(f64)
 i <= float(i)
 i <= float(i32)
@@ -7418,7 +7418,7 @@ i > i
 i > i ** i32
 i > i ** i64
 i > i / i
-i > i or ok
+i > i OR ok
 i > i32
 i > i32 ? 1 : true
 i > i32 ? foo : score
@@ -7546,7 +7546,7 @@ i in array ? foo : false
 i in array || ok
 i not in array
 i not in array ? foo : list
-i not in array and true
+i not in array AND true
 i not in i64 .. 1
 i not in map(array, #)
 i not in {"foo": 1}.div
@@ -7571,7 +7571,7 @@ i32 != f32
 i32 != f32 && ok
 i32 != f32 / f64
 i32 != f32 ? f64 : i32
-i32 != f32 and ok
+i32 != f32 AND ok
 i32 != f64
 i32 != f64 == true
 i32 != findIndex(list, false)
@@ -7966,7 +7966,7 @@ i32 <= 0.5 * i
 i32 <= 0.5 + i64
 i32 <= 1 ? i : f32
 i32 <= 1 ? true : true
-i32 <= 1 or 0.5 == 0.5
+i32 <= 1 OR 0.5 == 0.5
 i32 <= abs(i32)
 i32 <= count(list, ok)
 i32 <= f32
@@ -8012,7 +8012,7 @@ i32 == f32
 i32 == f32 ? f32 : nil
 i32 == f32 ? half : "bar"
 i32 == f32 ? score : false
-i32 == f32 or ok
+i32 == f32 OR ok
 i32 == f64
 i32 == f64 != ok
 i32 == f64 * 0.5
@@ -8027,7 +8027,7 @@ i32 == i % i64
 i32 == i ? "foo" : greet
 i32 == i ? type(false) : array
 i32 == i ^ f64
-i32 == i and ok
+i32 == i AND ok
 i32 == i || ok
 i32 == i32
 i32 == i32 ? add : add
@@ -8041,7 +8041,7 @@ i32 == max(0.5)
 i32 == min(f32)
 i32 == min(i32)
 i32 == nil ? f32 : add
-i32 == nil and ok
+i32 == nil AND ok
 i32 == {"foo": f32, "foo": list}?.String?.Qux
 i32 > -0.5
 i32 > -1
@@ -8217,7 +8217,7 @@ i64 != 0.5 != true
 i64 != 0.5 * 1
 i64 != 0.5 ? false : i64
 i64 != 0.5 ^ 1
-i64 != 0.5 and f64 == 1
+i64 != 0.5 AND f64 == 1
 i64 != 1 || f64 < i
 i64 != 1 || ok
 i64 != abs(f64)
@@ -8243,7 +8243,7 @@ i64 != half(f64)
 i64 != i
 i64 != i == nil
 i64 != i ? array : f32
-i64 != i and ok
+i64 != i AND ok
 i64 != i32
 i64 != i32 ? 1 : f32
 i64 != i64
@@ -8584,7 +8584,7 @@ i64 < f64 + f64
 i64 < f64 - f32
 i64 < f64 - i
 i64 < f64 ? i64 : score
-i64 < f64 or ok
+i64 < f64 OR ok
 i64 < float(f64)
 i64 < half(0.5)
 i64 < i
@@ -8621,7 +8621,7 @@ i64 <= 1 != true
 i64 <= 1 ** f64
 i64 <= 1 == ok
 i64 <= 1 ? array : ok
-i64 <= 1 and ok
+i64 <= 1 AND ok
 i64 <= array[i32]
 i64 <= f32
 i64 <= f32 && ok
@@ -8718,7 +8718,7 @@ i64 > f32 - 1
 i64 > f32 ? div : false
 i64 > f64
 i64 > f64 == nil
-i64 > f64 and 1 > i64
+i64 > f64 AND 1 > i64
 i64 > first(array)
 i64 > float(f32)
 i64 > half(f64)
@@ -8752,7 +8752,7 @@ i64 >= 0.5 == true
 i64 >= 0.5 ? array : array
 i64 >= 0.5 ? i32 : nil
 i64 >= 0.5 ^ 0.5
-i64 >= 0.5 and f32 != nil
+i64 >= 0.5 AND f32 != nil
 i64 >= 1 + f64
 i64 >= 1 + i32
 i64 >= 1 ? i : false
@@ -8767,14 +8767,14 @@ i64 >= f64
 i64 >= f64 + i
 i64 >= f64 / i64
 i64 >= f64 == ok
-i64 >= f64 and ok
+i64 >= f64 AND ok
 i64 >= find(array, ok)
 i64 >= float(f32)
 i64 >= float(i)
 i64 >= float(i32)
 i64 >= half(0.5)
 i64 >= i
-i64 >= i and ok
+i64 >= i AND ok
 i64 >= i32
 i64 >= i32 % i64
 i64 >= i64
@@ -9479,12 +9479,12 @@ list == array ? div : i
 list == list
 list == list == nil
 list == list ? f64 : array
-list == list or add != nil
+list == list OR add != nil
 list == map(list, f32)
 list == map(list, i64)
 list == nil == nil
 list == nil == ok
-list == nil or i == 0.5
+list == nil OR i == 0.5
 list == sort(array)
 list == {"bar": half, "foo": "foo"}?.i32
 list[-1]
@@ -10066,7 +10066,7 @@ map(list, f64) != list
 map(list, false ? # : nil)
 map(list, false ? f32 : #)
 map(list, false ? f32 : foo)
-map(list, false and true)
+map(list, false AND true)
 map(list, filter(list, false))
 map(list, first(list))
 map(list, float(0.5))
@@ -11081,14 +11081,14 @@ min(true ? i32 : score)
 nil != "bar" ? i64 : 0.5 - i
 nil != 0.5 && 0.5 != f32
 nil != 1 && ok
-nil != 1 or any(list, false)
+nil != 1 OR any(list, false)
 nil != 1 || ok
 nil != f32 || ok
 nil != f64 && ok
-nil != f64 or ok
+nil != f64 OR ok
 nil != f64 || array != array
-nil != false and not true
-nil != false and ok
+nil != false AND not true
+nil != false AND ok
 nil != false || ok
 nil != foo == ok
 nil != foo || ok
@@ -11099,9 +11099,9 @@ nil != foo?.Bar
 nil != foo?.Qux
 nil != foo?.String
 nil != greet ? half : half
-nil != greet or f32 < i
-nil != i32 or f32 >= 1
-nil != i64 or i >= 1
+nil != greet OR f32 < i
+nil != i32 OR f32 >= 1
+nil != i64 OR i >= 1
 nil != ok == not true
 nil != true == ok
 nil == 1 != nil ? "bar" : i32
@@ -11121,7 +11121,7 @@ nil == true ? i64 ^ f32 : foo
 nil == true || ok
 nil in array || ok
 nil in array[i32:i64]
-nil in list and ok
+nil in list AND ok
 none(array, !ok)
 none(array, !true)
 none(array, "bar" == "bar")
@@ -11220,7 +11220,7 @@ none(array, ok) ? f32 : !ok
 none(array, score == nil)
 none(array, score == score)
 none(array, true ? ok : f64)
-none(array, true or true)
+none(array, true OR true)
 none(i64 .. i32, # > #)
 none(list, "bar" not in #)
 none(list, # != #)
@@ -11239,7 +11239,7 @@ none(list, array == nil)
 none(list, f32 > i)
 none(list, f64 == i32)
 none(list, false && false)
-none(list, false) or f64 >= i64
+none(list, false) OR f64 >= i64
 none(list, foo != #)
 none(list, foo == #)
 none(list, greet != add)
@@ -11561,11 +11561,11 @@ not (false && true)
 not (false == false)
 not (false == nil)
 not (false == true)
-not (false and false)
-not (false and true)
-not (false or false)
-not (false or ok)
-not (false or true)
+not (false AND false)
+not (false AND true)
+not (false OR false)
+not (false OR ok)
+not (false OR true)
 not (false || false)
 not (false || ok)
 not (false || true)
@@ -11792,12 +11792,12 @@ not (ok == false)
 not (ok == nil)
 not (ok == ok)
 not (ok == true)
-not (ok and false)
-not (ok and ok)
-not (ok and true)
-not (ok or false)
-not (ok or ok)
-not (ok or true)
+not (ok AND false)
+not (ok AND ok)
+not (ok AND true)
+not (ok OR false)
+not (ok OR ok)
+not (ok OR true)
 not (ok || ok)
 not (ok || true)
 not (score != add)
@@ -11821,11 +11821,11 @@ not (true && true)
 not (true == nil)
 not (true == ok)
 not (true == true)
-not (true and false)
-not (true and ok)
-not (true and true)
-not (true or false)
-not (true or ok)
+not (true AND false)
+not (true AND ok)
+not (true AND true)
+not (true OR false)
+not (true OR ok)
 not (true || false)
 not all(array, ok)
 not all(array, true)
@@ -11879,7 +11879,7 @@ not false ? score : true
 not false ? true : 0.5
 not false ? true : 1
 not false ? true : nil
-not false or "foo" > "bar"
+not false OR "foo" > "bar"
 not none(array, # == #)
 not none(array, false)
 not none(array, ok)
@@ -11937,9 +11937,9 @@ not ok ? score : true
 not ok ? true : f32
 not ok ? true : false
 not ok ? true : score
-not ok and not ok
-not ok or ok
-not ok or one(array, true)
+not ok AND not ok
+not ok OR ok
+not ok OR one(array, true)
 not ok || ok
 not ok || true ? 0.5 : 1
 not one(array, # > f32)
@@ -12035,8 +12035,8 @@ ok && true != ok
 ok && true == nil
 ok == !false
 ok == !ok
-ok == (false or true)
-ok == (ok and ok)
+ok == (false OR true)
+ok == (ok AND ok)
 ok == any(list, ok)
 ok == false == nil
 ok == nil ? false : add
@@ -12223,73 +12223,73 @@ ok ? score : score
 ok ? string(half) : array
 ok ? toJSON("foo") : i32
 ok ? true : foo?.Qux
-ok and !ok
-ok and "bar" not endsWith foo?.Bar
-ok and "foo" endsWith "foo"
-ok and 0.5 <= f32
-ok and 0.5 > f64
-ok and 0.5 >= f64
-ok and 1 != 1
-ok and 1 != nil
-ok and 1 < i64
-ok and 1 == 1
-ok and add == add
-ok and any(list, false)
-ok and f32 >= 1
-ok and f64 != i
-ok and f64 != nil
-ok and f64 > 1
-ok and false != true
-ok and i > i32
-ok and i >= f64
-ok and i >= i64
-ok and i32 != nil
-ok and i32 == 0.5
-ok and i32 >= f64
-ok and i64 != nil
-ok and i64 <= i
-ok and i64 > 1
-ok and list == list
-ok and nil != i
-ok and nil != true
-ok and none(list, ok)
-ok and not ok
-ok and not true
-ok and ok
+ok AND !ok
+ok AND "bar" not endsWith foo?.Bar
+ok AND "foo" endsWith "foo"
+ok AND 0.5 <= f32
+ok AND 0.5 > f64
+ok AND 0.5 >= f64
+ok AND 1 != 1
+ok AND 1 != nil
+ok AND 1 < i64
+ok AND 1 == 1
+ok AND add == add
+ok AND any(list, false)
+ok AND f32 >= 1
+ok AND f64 != i
+ok AND f64 != nil
+ok AND f64 > 1
+ok AND false != true
+ok AND i > i32
+ok AND i >= f64
+ok AND i >= i64
+ok AND i32 != nil
+ok AND i32 == 0.5
+ok AND i32 >= f64
+ok AND i64 != nil
+ok AND i64 <= i
+ok AND i64 > 1
+ok AND list == list
+ok AND nil != i
+ok AND nil != true
+ok AND none(list, ok)
+ok AND not ok
+ok AND not true
+ok AND ok
 ok not in sort(array)
-ok or !false
-ok or !ok
-ok or !true
-ok or "bar" < "bar"
-ok or "foo" != nil
-ok or 0.5 != i32
-ok or 0.5 != i64
-ok or 0.5 <= 0.5
-ok or 0.5 == 1
-ok or 0.5 >= i
-ok or 1 != i32
-ok or 1 >= 0.5
-ok or f64 < f32
-ok or f64 < i64
-ok or fromJSON("bar")
-ok or greet != add
-ok or half == nil
-ok or half == score
-ok or i != 0.5
-ok or i < 1
-ok or i32 < 0.5
-ok or i32 == f64
-ok or i32 > 0.5
-ok or i64 != f32
-ok or i64 == 1
-ok or list == array
-ok or nil != 0.5
-ok or not false
-ok or not ok
-ok or not true
-ok or ok
-ok or ok || false
-ok or one(array, true)
+ok OR !false
+ok OR !ok
+ok OR !true
+ok OR "bar" < "bar"
+ok OR "foo" != nil
+ok OR 0.5 != i32
+ok OR 0.5 != i64
+ok OR 0.5 <= 0.5
+ok OR 0.5 == 1
+ok OR 0.5 >= i
+ok OR 1 != i32
+ok OR 1 >= 0.5
+ok OR f64 < f32
+ok OR f64 < i64
+ok OR fromJSON("bar")
+ok OR greet != add
+ok OR half == nil
+ok OR half == score
+ok OR i != 0.5
+ok OR i < 1
+ok OR i32 < 0.5
+ok OR i32 == f64
+ok OR i32 > 0.5
+ok OR i64 != f32
+ok OR i64 == 1
+ok OR list == array
+ok OR nil != 0.5
+ok OR not false
+ok OR not ok
+ok OR not true
+ok OR ok
+ok OR ok || false
+ok OR one(array, true)
 ok || "bar" not contains string(true)
 ok || 0.5 < i32
 ok || 0.5 <= 0.5
@@ -12469,7 +12469,7 @@ one(list, not false)
 one(list, not ok)
 one(list, not true)
 one(list, ok)
-one(list, ok) and ok
+one(list, ok) AND ok
 one(list, one(list, ok))
 one(list, score == half)
 one(list, true) && ok ? i : i64
@@ -12499,7 +12499,7 @@ score != add != true
 score != add ? i64 : "foo"
 score != div
 score != div ? i : f32
-score != div and ok
+score != div AND ok
 score != foo.Qux
 score != foo.String
 score != foo?.Qux
@@ -12520,12 +12520,12 @@ score == foo?.Qux
 score == foo?.String
 score == greet
 score == greet ? half : f64
-score == greet and ok
+score == greet AND ok
 score == half
 score == score
 score == score ? 0.5 : foo
 score == score ? nil : i32
-score == score or ok
+score == score OR ok
 score == {"bar": 0.5}.f32
 score(-1)
 score(-i)
@@ -13032,7 +13032,7 @@ string(false ? 1 : f32)
 string(false ? 1 : score)
 string(false ? div : "foo")
 string(false ? f32 : foo)
-string(false and true)
+string(false AND true)
 string(false) <= foo.Bar
 string(false) > string(add)
 string(filter(list, ok))
@@ -13344,8 +13344,8 @@ string(ok == true)
 string(ok ? 0.5 : "foo")
 string(ok ? 0.5 : true)
 string(ok ? true : i32)
-string(ok or false)
-string(ok or ok)
+string(ok OR false)
+string(ok OR ok)
 string(ok || ok)
 string(ok)
 string(one(array, false))
@@ -13413,8 +13413,8 @@ string(true ? i32 : "foo")
 string(true ? i32 : greet)
 string(true ? score : 0.5)
 string(true ? true : i32)
-string(true and false)
-string(true or true)
+string(true AND false)
+string(true OR true)
 string(true || false)
 string(true) endsWith string(i64)
 string(true) not in foo
@@ -13808,8 +13808,8 @@ toJSON(false ? false : i32)
 toJSON(false ? greet : 1)
 toJSON(false ? greet : i32)
 toJSON(false ? nil : f64)
-toJSON(false and ok)
-toJSON(false and true)
+toJSON(false AND ok)
+toJSON(false AND true)
 toJSON(filter(array, ok))
 toJSON(filter(list, false))
 toJSON(filter(list, true))
@@ -14097,7 +14097,7 @@ toJSON(ok ? 1 : half)
 toJSON(ok ? f32 : div)
 toJSON(ok ? false : i32)
 toJSON(ok ? nil : f32)
-toJSON(ok or true)
+toJSON(ok OR true)
 toJSON(ok || ok)
 toJSON(ok)
 toJSON(one(array, i32 < #))
@@ -14158,7 +14158,7 @@ toJSON(true ? list : true)
 toJSON(true ? nil : array)
 toJSON(true ? ok : list)
 toJSON(true ? true : f64)
-toJSON(true and ok)
+toJSON(true AND ok)
 toJSON(true) in foo
 toJSON(type("bar"))
 toJSON(type("foo"))
@@ -14440,7 +14440,7 @@ true ? ok : f64 + f64
 true ? score : foo.Qux
 true ? true : f32 >= i64
 true ? true : foo?.String
-true and ok and ok
+true AND ok AND ok
 true || 1 not in array
 type(!false)
 type(!ok)
@@ -15047,10 +15047,10 @@ type(ok ? i64 : "bar")
 type(ok ? list : "foo")
 type(ok ? ok : half)
 type(ok ? true : false)
-type(ok and ok)
-type(ok and true)
-type(ok or false)
-type(ok or true)
+type(ok AND ok)
+type(ok AND true)
+type(ok OR false)
+type(ok OR true)
 type(ok || true)
 type(ok)
 type(ok) in foo
@@ -15128,7 +15128,7 @@ type(true ? list : ok)
 type(true ? nil : list)
 type(true ? nil : ok)
 type(true ? true : 1)
-type(true and true)
+type(true AND true)
 type(true) endsWith toBase64("foo")
 type(type("bar"))
 type(type("foo"))
@@ -15744,7 +15744,7 @@ values({"foo": list, "bar": 1})
 {"bar": nil}?.i64
 {"bar": nil}?.list
 {"bar": nil}?.ok
-{"bar": ok or ok}
+{"bar": ok OR ok}
 {"bar": ok || ok}
 {"bar": ok, "bar": list}
 {"bar": ok, "bar": nil == half}.f64

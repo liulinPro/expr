@@ -383,7 +383,7 @@ func (c *compiler) BinaryNode(node *ast.BinaryNode) {
 		c.emit(OpEqual)
 		c.emit(OpNot)
 
-	case "or", "||":
+	case "OR", "||":
 		c.compile(node.Left)
 		c.derefInNeeded(node.Left)
 		end := c.emit(OpJumpIfTrue, placeholder)
@@ -392,7 +392,7 @@ func (c *compiler) BinaryNode(node *ast.BinaryNode) {
 		c.derefInNeeded(node.Right)
 		c.patchJump(end)
 
-	case "and", "&&":
+	case "AND", "&&":
 		c.compile(node.Left)
 		c.derefInNeeded(node.Left)
 		end := c.emit(OpJumpIfFalse, placeholder)

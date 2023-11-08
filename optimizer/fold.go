@@ -229,7 +229,7 @@ func (fold *fold) Visit(node *Node) {
 					patchWithType(&FloatNode{Value: math.Pow(a.Value, b.Value)})
 				}
 			}
-		case "and", "&&":
+		case "AND", "&&":
 			a := toBool(n.Left)
 			b := toBool(n.Right)
 
@@ -240,7 +240,7 @@ func (fold *fold) Visit(node *Node) {
 			} else if (a != nil && !a.Value) || (b != nil && !b.Value) { // "x and false" or "false and x"
 				patch(&BoolNode{Value: false})
 			}
-		case "or", "||":
+		case "OR", "||":
 			a := toBool(n.Left)
 			b := toBool(n.Right)
 

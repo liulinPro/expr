@@ -252,7 +252,7 @@ func (v *checker) BinaryNode(node *ast.BinaryNode) (reflect.Type, info) {
 			return boolType, info{}
 		}
 
-	case "or", "||", "and", "&&":
+	case "OR", "||", "AND", "&&":
 		if isBool(l) && isBool(r) {
 			return boolType, info{}
 		}

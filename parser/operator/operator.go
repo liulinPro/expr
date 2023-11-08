@@ -25,9 +25,9 @@ var Unary = map[string]Operator{
 
 var Binary = map[string]Operator{
 	"|":          {0, Left},
-	"or":         {10, Left},
+	"OR":         {10, Left},
 	"||":         {10, Left},
-	"and":        {15, Left},
+	"AND":        {15, Left},
 	"&&":         {15, Left},
 	"==":         {20, Left},
 	"!=":         {20, Left},

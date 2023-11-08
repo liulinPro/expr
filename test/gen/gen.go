@@ -51,9 +51,9 @@ var (
 	predicates []string
 	builtins   []string
 	operators  = []string{
-		"or",
+		"OR",
 		"||",
-		"and",
+		"AND",
 		"&&",
 		"==",
 		"!=",

@@ -124,7 +124,7 @@ loop:
 			switch l.word() {
 			case "not":
 				return not
-			case "in", "or", "and", "matches", "contains", "startsWith", "endsWith":
+			case "in", "OR", "AND", "matches", "contains", "startsWith", "endsWith":
 				l.emit(Operator)
 			case "let":
 				l.emit(Operator)

@@ -19,7 +19,7 @@ var keywords = []string{
 	"exit", "opcodes", "debug", "mem",
 
 	// Operators:
-	"and", "or", "in", "not", "not in",
+	"AND", "OR", "in", "not", "not in",
 	"contains", "matches", "startsWith", "endsWith",
 }
 

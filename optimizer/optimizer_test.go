@@ -90,7 +90,7 @@ func TestOptimize_in_range(t *testing.T) {
 		Value: "age",
 	}
 	expected := &ast.BinaryNode{
-		Operator: "and",
+		Operator: "AND",
 		Left: &ast.BinaryNode{
 			Operator: ">=",
 			Left:     left,
